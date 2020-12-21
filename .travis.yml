@@ -11,7 +11,7 @@ script:
   # test natively
   - docker build                                \
             -t innovanon/cpuminer:native  \
-            --build-arg COIN=x11                \
+            --build-arg COIN=scrypt                \
             --pull .
   - docker run -d innovanon/cpuminer:native
   - sleep 19
@@ -20,11 +20,17 @@ script:
   # deploy generic
   - docker build                                \
             -t innovanon/cpuminer:generic \
-            --build-arg COIN=x11                \
+            --build-arg COIN=scrypt                \
             --pull .
   - docker run -d innovanon/cpuminer:generic
   - sleep 19
   - docker ps -a
   - docker stop innovanon/cpuminer:generic
   # TODO deploy
+
+branches:
+  only:
+    - master
+rvm:
+ - 2.4
 
