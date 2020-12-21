@@ -6,7 +6,7 @@ commands:
       coin:
         # TODO
         #default: "sha256d"
-        default: "neoscrypt"
+        default: "scrypt"
         type: string
       docker_tag:
         default: "native"

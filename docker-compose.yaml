@@ -5,7 +5,7 @@ services:
       context: .
       args:
         # TODO other coin
-        COIN: "cpuchain"
+        COIN: "scrypt"
     image: "innovanon/cpuminer:${DOCKER_TAG}"
     deploy:
       mode: replicated
